@@ -18,7 +18,7 @@ function printWow() {
   }
 }
 
-if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv', 'push', 'pull'].indexOf(cmd) != -1) {
+if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv', 'push', 'pull', 'remote'].indexOf(cmd) != -1) {
   prg = 'git';
 } else if (['install', 'link', 'publish'].indexOf(cmd) != -1) {
   prg = 'npm';
