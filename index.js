@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+require('console.loge');
 var spawn = require('child_process').spawn;
 
 var cmd = process.argv[2];
@@ -14,7 +15,7 @@ function printWow() {
     for (var j=0; j < 70; j++) {
       if (Math.random() < 0.4) indent += ' ';
     }
-    console.log(Math.random() < 0.5 ? indent + 'wow' : '');
+    console.loge(Math.random() < 0.5 ? indent + 'wow' : '');
   }
 }
 

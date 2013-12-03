@@ -3,5 +3,8 @@
   "version": "0.0.1",
   "description": "CLI that understands generic names",
   "bin": "./index.js",
-  "repository": "git://github.com/benatkin/such"
+  "repository": "git://github.com/benatkin/such",
+  "dependencies": {
+    "console.loge": "*"
+  }
 }
