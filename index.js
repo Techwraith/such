@@ -32,7 +32,7 @@ if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv',
 } else if (cmd == 'run') {
   prg = 'node';
   if (args.length == 0) {
-    console.error('very need program. run such repl for node repl.');
+    console.errore('very need program. run such repl for node repl.');
     process.exit(1);
   }
 } else if (cmd == 'repl') {
@@ -44,7 +44,7 @@ if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv',
   printWow();
   process.exit(0);
 } else {
-  console.error('such command not understood');
+  console.errore('such command not understood');
   process.exit(1);
 }
 
