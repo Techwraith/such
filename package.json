@@ -1,0 +1,5 @@
+{
+  "name": "such",
+  "description": "CLI that understands generic names",
+  "bin": "./index.js"
+}
