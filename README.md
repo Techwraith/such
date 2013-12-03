@@ -36,6 +36,11 @@ runs node. run takes args, repl doesn't.
 
 runs the rails commands
 
+## todo
+
+* check if current directory is a rails or node project. needed for test.
+* check for git or svn (yes I have projects that use it)
+
 ## license
 
 very MIT. wow.
