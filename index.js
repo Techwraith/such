@@ -4,7 +4,7 @@ require('console.loge');
 var spawn = require('child_process').spawn;
 
 var cmd = process.argv[2];
-var args = process.argv.slice(2);
+var args = process.argv.slice(3);
 var prg;
 
 function printWow() {
@@ -19,15 +19,18 @@ function printWow() {
   }
 }
 
-if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv', 'push', 'pull', 'remote'].indexOf(cmd) != -1) {
+if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv', 'push', 'pull', 'remote', 'log', 'loge'].indexOf(cmd) != -1) {
+  if (cmd == 'loge') cmd = 'log';
   prg = 'git';
+  args.unshift(cmd);
 } else if (['install', 'link', 'publish'].indexOf(cmd) != -1) {
   prg = 'npm';
+  args.unshift(cmd);
 } else if (['console', 'server', 'generate'].indexOf(cmd) != -1) {
   prg = 'rails';
+  args.unshift(cmd);
 } else if (cmd == 'run') {
   prg = 'node';
-  args.shift();
   if (args.length == 0) {
     console.error('very need program. run such repl for node repl.');
     process.exit(1);
@@ -37,7 +40,6 @@ if (['init', 'add', 'commit', 'clone', 'checkout', 'status', 'diff', 'rm', 'mv',
   args = [];
 } else if (cmd == 'edit') {
   prg = 'vim';
-  args.shift();
 } else if (cmd == 'wow') {
   printWow();
   process.exit(0);
